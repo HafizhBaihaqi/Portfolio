@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts.js">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+    <title>Admission Prediction</title>
+</head>
+<body style="background-image: url({{url_for('static',filename='background predict3.png') }}); background-size: contain;">
+    <center>
+        <br><br><br><br><br><br><br>
+        <h2 class="display-4"><strong>Heart Disease</strong> <span class="badge badge-secondary">Predictor</span></h2>
+        <br>
+    </center>
+
+    <div class="container-fluid"></div>
+        <center>
+        <form method="POST" action="http://127.0.0.1:5000/result">
+
+            <!-- Age -->
+            <h5><span class="badge badge-secondary">Age</span></h5>
+            <input type="number" name="Age" step="1" min="25" max="80" placeholder="input age" required>
+            
+            <!-- Gender -->
+            <h5><span class="badge badge-secondary"><label for="Gender">Gender</label></span></h5>
+            <select id="Gender" name="Gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+
+            <!-- Chest Pain -->
+            <h5><span class="badge badge-secondary"><label for="ChestPain">ChestPain</label></span></h5>
+            <select id="ChestPain" name="ChestPain">
+                <option value="0">typical angina</option>
+                <option value="1">atypical angina</option>
+                <option value="2">non-anginal pain</option>
+                <option value="3">asymptomatic</option>
+            </select>
+
+            <!-- Resting Blood Pressure -->
+            <h5><span class="badge badge-secondary">Resting Blood Pressure</span></h5>
+            <input type="number" name="RestingBloodPressure" step="1" min="90" max="200" placeholder="input resting blood pressure" required>
+
+            <!-- Cholesterol -->
+            <h5><span class="badge badge-secondary">Cholesterol</span></h5>
+            <input type="number" name="Cholesterol" step="1" min="120" max="570" placeholder="input cholesterol" required>
+            
+            <!-- Fasting Blood Sugar -->
+            <h5><span class="badge badge-secondary">Fasting Blood Sugar</span></h5>
+            <input type="radio" id="0" name="FastingBloodSugar" value="0">
+            <label for="0"><120mg/dl</label>
+            <input type="radio" id="1" name="FastingBloodSugar" value="1">
+            <label for="1">>120mg/dl</label>
+
+            <!-- Resting ECG -->
+            <h5><span class="badge badge-secondary"><label for="RestingECG">Resting ECG</label></span></h5>
+            <select id="RestingECG" name="RestingECG">
+                <option value="0">normal</option>
+                <option value="1">having ST-T wave abnormality</option>
+                <option value="2">showing probable or definite left ventricular hypertrophy</option>
+            </select>
+
+            <!-- Max Heart Rate Achieved -->
+            <h5><span class="badge badge-secondary">Max Heart Rate</span></h5>
+            <input type="number" name="MaxHeartRateAchieved" step="1" min="70" max="202" placeholder="input max heart rate" required>
+
+            <!-- Exercise Induced Angina -->
+            <h5><span class="badge badge-secondary">Exercise Induced Angina</span></h5>
+            <input type="radio" id="0" name="ExerciseInducedAngina" value="0">
+            <label for="0">No</label>
+            <input type="radio" id="1" name="ExerciseInducedAngina" value="1">
+            <label for="1">Yes</label>
+
+            <!-- Oldpeak -->
+            <h5><span class="badge badge-secondary">Oldpeak</span></h5>
+            <input type="number" name="Oldpeak" step="0.1" min="0.0" max="6.2" placeholder="input oldpeak" required>
+
+            <!-- Slope -->
+            <h5><span class="badge badge-secondary"><label for="Slope">Slope</label></span></h5>
+            <select id="Slope" name="Slope" aria-placeholder="input slope">
+                <option value="0">upsloping</option>
+                <option value="1">horizontal/flat</option>
+                <option value="2">downsloping</option>
+            </select>
+
+            <!-- Major Vessels -->
+            <h5><span class="badge badge-secondary">Major Vessels</span></h5>
+            <input type="number" name="MajorVessels" step="1" min="0" max="4" placeholder="input major vessel" required>
+
+            <!-- Thalassemia -->
+            <h5><span class="badge badge-secondary"><label for="Thalassemia">Thalassemia</label></span></h5>
+            <select id="Thalassemia" name="Thalassemia">
+                <option value="0">normal</option>
+                <option value="1">fixed defect</option>
+                <option value="2">reversable defect</option>
+            </select>
+            <br>
+            <br>
+            <button style="height:45px;width:150px;font-size: 20px;text-align: center;line-height: 20px;background-color:#2a7886; color: cornsilk; type="button" class="btn btn-info">🔍 Predict</button>
+        </form>
+        </center>
+</body>
+</html>
