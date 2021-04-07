@@ -9,4 +9,4 @@ Preprocessing, exploratory data analysis, implementing machine learning to make 
 Using content based recommendation system with cosine similarity and content based filtering one user to make an anime recommendation system.
 
 3. Market Segmentation  
-Using RFM (recency, frequency, monetary) method to represent transaction activity and customer behaviour.
+Using RFM (recency, frequency, monetary) method to represent transaction activity and customer behaviour. Note: the outputs in this notebook has been cleared due to size issue.
