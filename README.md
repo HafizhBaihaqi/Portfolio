@@ -1,5 +1,5 @@
 # Portfolio
-This is my repository specifically for my personal project. I am mainly using Python to do preprocessing, EDA and machine learning.
+This is my repository specifically for my personal project. I am mainly using Python and Jupyter Notebook.
 
 
 1. Analysis & Prediction - Heart Disease  
