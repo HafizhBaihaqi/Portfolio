@@ -11,5 +11,5 @@ Using content based recommendation system with cosine similarity and content bas
 3. Market Segmentation  
 Using RFM (recency, frequency, monetary) method to represent transaction activity and customer behavior, and using K-Means to apply segmentation. Note: the outputs in this notebook has been cleared due to size issue.
 
-4. Video Game Sales Analysis and Visualization
+4. Video Game Sales Analysis and Visualization  
 Understanding data and making analysis. Aiming to explore as much as possible in a simple, intuitive and informative way.
